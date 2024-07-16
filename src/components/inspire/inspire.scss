@@ -1,0 +1,60 @@
+@import '../../App.scss';
+
+.InspireContainer {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  @include mobile {
+  }
+  .modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left : 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.875);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    h1{
+      font-size: 60px;
+      font-family: Roboto;
+      text-wrap: nowrap;
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+  }
+  .items-container {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    align-items: center;
+    justify-content: center;    
+    gap: 40px;
+    @include desktop {
+      grid-template-columns: 250px 250px;
+    }
+    @include mobile {
+      grid-template-columns: 200px;
+      gap: 10px;
+    }
+    }
+    .youtube-thumbnail{
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      opacity: .6;
+      @include mobile {
+        width: 200px;
+        height: 100px;
+        opacity: .5;
+      }
+    }
+  }

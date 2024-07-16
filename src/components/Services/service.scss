@@ -1,0 +1,194 @@
+@import '../../App.scss';
+
+
+.service-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background : linear-gradient(180deg, #0c0c1d, #080840a5);
+  overflow-x: hidden;
+  gap: 20px;
+  .text-container {
+    flex: .6;
+    align-items: center;
+    align-self: flex-end;
+    display : flex;
+    gap: 20px;
+    flex-direction: row;
+    @include mobile {
+      gap: 10px;
+      flex: .5;
+    }
+    p{
+      font-family:'Roboto';
+      text-align: right;
+      color: gray;
+      font-style: italic;
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+    hr{
+      width: 400px;
+      border: none;
+      border-top: 0.1px solid gray;
+      @include mobile {
+        width: 70px;
+      }
+    }
+  }
+  .texts {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    @include mobile {
+      flex: 2;
+    }
+    .first-h1 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      @include mobile {
+        flex-direction: column;
+        gap: 10px;
+      }
+      img{
+        width: 300px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50px;
+        transition: all 1s;
+        @include mobile {
+          width: 200px;
+          height: 60px;
+        }
+      }
+      img:hover {
+        width: 400px;
+        height: 200px;
+        border-radius:100px;
+        @include mobile {
+          width: 300px;
+          height: 100px;
+        }
+      }
+      h1 {
+        font-weight: 100;
+        font-family: Roboto;
+        font-size: 90px;
+        @include mobile {
+          font-size: 40px;
+        }
+      }
+      b{
+        font-weight:700;
+      }
+      b:hover {
+        color: rgba(235, 196, 54, 0.873);
+      }
+    }
+    .second-h1 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      @include mobile {
+        flex-direction: column;
+        gap: 10px;
+      }
+      img{
+        width: 300px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50px;
+        transition: all 1s;
+        @include mobile {
+          width: 200px;
+          height: 60px;
+        }
+      }
+      img:hover {
+        width: 400px;
+        height: 200px;
+        border-radius:100px;
+        @include mobile {
+          width: 300px;
+          height: 100px;
+        }
+      }
+      h1 {
+        font-weight: 100;
+        font-family: Roboto;
+        font-size: 80px;
+        letter-spacing: 1px;
+        @include mobile {
+          font-size: 30px;
+        }
+      }
+      b{
+        font-weight:700;
+      }
+      b:hover {
+        color: rgba(235, 196, 54, 0.873);
+      }
+    }
+  }
+
+
+  .exprience {
+    flex: 1.4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    @include mobile {
+      flex:1;
+      display: grid;
+      grid-template-columns: 100px 100px 100px;
+      padding: 10px;
+    }
+    h1{
+      position : absolute; 
+      top : 8%;
+      left : 40px;
+      font-family : Roboto;
+      @include mobile {
+        font-size: 16px;
+        top : -12%;
+        left: 20px;
+      }
+    }
+    .items {
+      z-index: 2 ;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      img {
+        @include mobile {
+          width: 90px;
+        }
+      }
+    }
+  } 
+}
+
+
+.hello {
+  width: 60%;
+  transition: all .5s;
+}
+.hello:hover {
+  width: 70%;
+}
+

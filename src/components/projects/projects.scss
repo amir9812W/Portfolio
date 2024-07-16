@@ -1,0 +1,136 @@
+@import '../../App.scss';
+.projects-container {
+
+  position: relative;
+
+  .text {
+    position: sticky;
+    top: 0;
+    padding-top: 40px;
+    justify-self: content;
+    align-items: center;
+    color: orange;
+    font-size: 30px;
+    h1{
+      text-align: center;
+      padding-bottom: 12px;
+      @include mobile {
+        font-size: 30px;
+      }
+    }
+    .progressBar{
+      background-color: white;
+      height :15px;
+      padding-top: 10px;
+      z-index: 1000;
+    }
+  }
+  .single-container{
+    display: flex;
+    justify-content: center;
+    .wrapper1{
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100vh;
+      padding: 100px;
+      gap: 50px;
+      max-width: 1366px;
+      @include mobile {
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0px;
+      }
+      .img-container {
+        width: 100%; 
+        img{
+          width: 100%;
+          border-radius: 20px;
+          @include mobile {
+            width: 100%;
+            padding-top: 100px;
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+        }
+      }
+      .text-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        @include mobile {
+          transform: none !important;
+          padding: 10px;
+        }
+        p {
+          font-size: 18px;
+          font-weight: 300;
+          font-family: "Roboto";
+          width: 100%;
+          @include mobile {
+            font-size: 14px;
+          }
+        }
+        h1{
+          font-size: 40px;
+          font-weight: 600;
+          font-family: "Roboto";
+          @include mobile {
+            font-size: 30px;
+          }
+        }
+        .button-container{
+          width: 80%;
+          display: flex;
+          justify-content: space-between;
+          @include mobile {
+            width: 80%;
+            margin-top: -10px;
+          }
+          .buttons {
+            padding: 20px 30px;
+            border-radius: 40px;
+            border: none;
+            background-color: rgb(255, 170, 67);
+            color: black;
+            transition : background-color .2s;
+            @include mobile {
+              padding: 6px 12px;
+            }
+          }
+          .buttons:hover{
+            background-color: rgb(251, 190, 115);
+          }
+          .buttons:active {
+            background-color: gray;
+          }
+          .buttons2{
+            padding: 20px 30px;
+            border-radius: 40px;
+            border: none;
+            background-color: gray;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: background-color .2s;
+            @include mobile {
+              padding: 6px 12px;
+            }
+          }
+          .buttons2:hover {
+            background-color: rgb(182, 180, 180);
+          }
+          .buttons2:active {
+            background-color: white;
+          }
+        }
+      }
+    }
+    }  
+  }
+
+  
+  

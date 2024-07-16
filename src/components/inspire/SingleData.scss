@@ -1,0 +1,56 @@
+@import '../../App.scss';
+
+.youtube-vid{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: top;
+  .describ{
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    top: 6px;
+    left: 10%;
+    bottom: 0px;
+    right: 0px;
+    z-index: 100;
+    p{
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 600;
+      color: white;
+      @include mobile {
+        font-size: 10px;
+      }
+    }
+  }
+  .des-thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .2s;
+    img {
+    @include mobile {
+      width: 60px;
+      height : 60px
+    }
+    }
+  }
+}
+
+.youtube-vid:hover .des-thumb {
+  opacity: 1;
+}
+
+.youtube-vid:hover .describ {
+  opacity: 1;
+}

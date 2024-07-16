@@ -1,0 +1,129 @@
+@import '../../App.scss';
+
+.container {
+  height: calc(100vh - 100px);
+  background : linear-gradient(180deg , #0c0c1d , rgb(43, 18, 64));
+  overflow: hidden;
+  position: relative;
+  .wrapper {
+    max-width: 1366px;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    display:flex;
+    align-items: center;
+    @include mobile {
+      justify-content: center;
+      margin-top: -50px;
+    }
+    .container-text{
+      display: flex;
+      justify-content: center;
+      align-items:flex-start;
+      flex-direction: column;
+      gap: 36px;
+
+      @include mobile {
+        align-items: center;
+      }
+  
+      @include desktop {
+        gap: 20px;
+      }
+
+      h2 {
+        font-family: 'roboto';
+        font-size: 36px;
+        color: #4d2b81;
+        letter-spacing: 8px;
+        @include mobile {
+          font-size:20px;
+        }
+        @include desktop {
+          font-size: 30px;
+        }
+      }
+      .texts{
+        p{
+          font-family: 'roboto';
+          font-weight: 600;
+          font-size: 90px;
+          @include mobile {
+            font-size: 30px;
+          }
+          @include desktop {
+            font-size: 66px;
+          }
+        }
+      }
+      .buttons{
+        display: flex;
+        width:  300px;
+        justify-content: space-between;
+        align-items:center;
+        @include mobile {
+          align-self: flex-start;
+          margin-top: 30px;
+        }
+        .button-one{
+          background-color: inherit;
+          border-style: solid;
+          border-color: white;
+          padding: 18px 20px;
+          border-radius: 8px;
+          color: white;
+          cursor: pointer;
+        }
+        .button-two {
+          background-color: white;
+          border-style: solid;
+          border-color: white;
+          padding: 18px 20px;
+          border-radius: 8px;
+          color: black;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.slidingText {
+  position: absolute;
+  bottom: -90px;
+  white-space : nowrap;
+  font-size: 50vh;
+  width: 50%;
+  color: #fbfbfb12;
+  font-weight: BOLD;
+  pointer-events: none;
+}
+
+.scroll-button {
+  background-color: inherit;
+  border: none;
+  img{
+    width: 60px;
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+.me{
+  background-position: bottom;
+  position: absolute;
+  overflow: hidden;
+  right: 150px;
+  bottom: 0;
+
+  @include mobile {
+    display: none;
+    width: 400px;
+    height: 400px;
+    bottom: -50px;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+  }
+}

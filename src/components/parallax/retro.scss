@@ -1,0 +1,41 @@
+@import '../../App.scss';
+
+.retro-container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  h1 {
+    font-size: 80px;
+    z-index: 100;
+    @include mobile {
+      font-size: 76px;
+    }
+  }
+  .mountains {
+    background-image: url('../../fukcing portfolio/mountain2.jpg');
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    background-size: cover;
+    overflow: hidden;
+    background-position: center;
+  }
+  .mountains-light{
+    background-image: url('../../fukcing portfolio/mountain.jpg');
+    position: absolute;
+    background-position: center;
+    bottom: 1px;
+    top: 1px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-size:cover;
+    overflow: hidden;
+  }
+}
